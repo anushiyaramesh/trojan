@@ -9,6 +9,7 @@ import About from './components/About';
 import Gallary from './components/Gallary';
 import Contact from './components/Contact';
 import Booking from './components/Booking';
+import Service from './components/Service';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,6 +24,8 @@ root.render(
     <Route path="/gallary" element={<Gallary />} />
     <Route path="/contact" element={<Contact />} />
     <Route path="/booking" element={<Booking />} />
+    <Route path="/service" element={<Service />} />
+
 
 
       </Routes>

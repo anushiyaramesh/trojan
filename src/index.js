@@ -8,8 +8,23 @@ import Home from './components/Home';
 import About from './components/About';
 import Gallary from './components/Gallary';
 import Contact from './components/Contact';
-import Booking from './components/Booking';
 import Service from './components/Service';
+import Staircase from './components/Services/Staircase';
+import FloorInstallation from './components/Services/FloorInstallation';
+import BespokeBookcases from './components/Services/BespokeBookcases';
+import SecretRooms from './components/Services/SecretRooms';
+import BespokeShelving from './components/Services/BespokeShelving';
+import MediaUnits from './components/Services/MediaUnits';
+import BuiltInCupboards from './components/Services/BuiltInCupboards';
+import FittedWardrobes from './components/Services/FittedWardrobes';
+import DoorInstallation from './components/Services/DoorInstallation';
+import HomeLibrary from './components/Services/HomeLibrary';
+import OutdoorGarden from './components/Services/OutdoorGarden';
+import PartitionWalls from './components/Services/PartitionWalls';
+import RoofsFitting from './components/Services/RoofsFitting';
+import Windows from './components/Services/Windows';
+import WoodenShopFronts from './components/Services/WoodenShopFronts';
+import KitchenFitting from './components/Services/KitchenFitting';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,9 +38,24 @@ root.render(
     <Route path="/about" element={<About />} />
     <Route path="/gallary" element={<Gallary />} />
     <Route path="/contact" element={<Contact />} />
-    <Route path="/booking" element={<Booking />} />
     <Route path="/service" element={<Service />} />
-
+    <Route path="/services/staircase" element={<Staircase />} />
+    <Route path="/services/floorinstallation" element={<FloorInstallation />} />
+    <Route path="/services/bespokebookcases" element={<BespokeBookcases />} />
+    <Route path="/services/secretrooms" element={<SecretRooms />} />
+    <Route path="/services/bespokeshelving" element={<BespokeShelving />} />
+    <Route path="/services/mediaunits" element={<MediaUnits />} />
+    <Route path="/services/builtincupboards" element={<BuiltInCupboards />} />
+    <Route path="/services/builtincupboards" element={<BuiltInCupboards />} />
+    <Route path="/services/fittedwardrobes" element={<FittedWardrobes />} />
+    <Route path="/services/doorinstallation" element={<DoorInstallation />} />
+    <Route path="/services/homelibrary" element={<HomeLibrary />} />
+    <Route path="/services/outdoorgarden" element={<OutdoorGarden />} />
+    <Route path="/services/partitionwalls" element={<PartitionWalls />} />
+    <Route path="/services/roofsfitting" element={<RoofsFitting />} />
+    <Route path="/services/windows" element={<Windows/>} />
+    <Route path="/services/woodenshopfronts" element={<WoodenShopFronts/>} />
+    <Route path="/services/kitchenfitting" element={<KitchenFitting/>} />
 
 
       </Routes>

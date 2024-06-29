@@ -1,133 +1,231 @@
 import { MdCall } from "react-icons/md";
-import { CiFacebook,CiInstagram ,CiTwitter,CiLinkedin } from "react-icons/ci";
+import { CiFacebook, CiInstagram, CiTwitter, CiLinkedin } from "react-icons/ci";
 import { FaAddressBook } from "react-icons/fa";
 import { FaBuildingColumns } from "react-icons/fa6";
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { RxHamburgerMenu } from "react-icons/rx";
-import { FaTimes } from 'react-icons/fa'
-import { NavLink } from 'react-router-dom';
+import { FaTimes } from 'react-icons/fa';
+
+import { FaBars } from 'react-icons/fa';
+
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 const Header = () => {
-
-// nav is starting off false
-const [nav, setNav] = useState(false)
-// so when user clicks the hamburger button, it goes from false(!nav) to true(nav)
-const handleClick = () => setNav(!nav)
-const [openAvatarDropdown, setOpenAvatarDropdown] = useState(false);
-
-const toggleAvatarDropdown = () => {
-setOpenAvatarDropdown(!openAvatarDropdown);
-};
-
-return (
-<header className="shadow">
-
-  <div class="bg-[#fef3c7] py-4 hidden md:flex ">
-    <div class="container mx-auto flex justify-between items-center text-sm text-[#451a03]">
-      <div class="flex space-x-4">
-        <div class="flex items-center space-x-1">
-          <FaAddressBook />
-          <span>13, Dean Road Sittingborn Kent Me102DG</span>
-        </div>
-        <div class="flex items-center space-x-1">
-          <FaBuildingColumns />
-          <span>TrOjAn CaRpEnTaRy</span>
-        </div>
-      </div>
-      <div class="flex space-x-4 items-center">
-        <div class="flex items-center space-x-1">
-          <MdCall />
-          <span>+07869514083</span>
-        </div>
-        <div class="flex space-x-2">
-          <CiFacebook />
-          <CiInstagram />
-          <CiTwitter />
-          <CiLinkedin />
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <nav className='flex justify-between p-3 items-center border-b bg-[#92400e]  nav'>
-    <div class="mr="> <img className="h-16 w-auto ml-8" src="/lg2.jpeg" alt="" />
-    </div>
-    <ul className='hidden  md:flex gap-6 text-white mr-8'>
-      <Link to='/'>
-      <li className='hover:text-[#fef3c7]'>Home</li>
-      </Link>
-      <Link to='/about'>
-      <li className='hover:text-[#fef3c7]'>About</li>
-      </Link>
-
-      <div onClick={toggleAvatarDropdown} className="relative transition-all duration-500">
-        <div className="flex gap-1">
-          <Link to='/service'>
-          <li className='  cursor-pointer hover:text-[#fef3c7] '>Services</li>
-          </Link>
-
-        </div>
-
-        <div className={`absolute ${openAvatarDropdown ? 'block' : 'hidden' } bg-[#fef3c7] text-[#92400e] rounded shadow-md mt-2 space-y-2`}>
-          <div className='py-6 p-4 m-4 flex flex-col   '>
-          <NavLink className= "mt-4" to="/profile">CustomFurniture</NavLink>
-          <NavLink className= "mt-4" to="/profile">Kitchen&Bedrooms</NavLink>
-          <NavLink className= "mt-4" to="/profile">Home&Renovations</NavLink>
-          <NavLink className= "mt-4" to="/dashboard">Desks&outdoor</NavLink>
-          <NavLink className= "mt-4" to="/dashboard">BespokeFurniture</NavLink>
-
-<NavLink className= "mt-2" to="/dashboard">CommercialProjects</NavLink>
-
-          </div>
-         
-        </div>
-      </div>
-      <Link to='/gallary'>
-      <li className='hover:text-[#fef3c7]-700'>Gallary</li>
-      </Link>
-      <Link to='/booking'>
-      <li className='hover:text-[#fef3c7]'>Booking</li>
-      </Link>
-      <Link to='/contact'>
-      <li className='hover:text-[#fef3c7]'>Contact Us</li>
-      </Link>
-
-    </ul>
-    {/* Hamburger or Close Icon */}
-    <div className=' md:hidden z-10' onClick={handleClick}>
-      {nav ?
-      <FaTimes size={25} color='white' /> :
-      <RxHamburgerMenu size={28} color='white' />}
-    </div>
-    {/* Mobile Menu */}
-    <ul className={`${ nav ? 'text-white opacity-100 transform translate-x-0' : 'opacity-0 transform -translate-y-full' } transition-transform absolute top-0 left-0 gap-6 w-full h-screen bg-zinc-800/80 flex flex-col justify-center items-center text-2xl`} onClick={()=> setNav(false)}
-      >
-      <Link to='/'>
-      <li className='hover:text-[#fef3c7]'>Home</li>
-      </Link>
-      <Link to='/features'>
-      <li className='hover:text-[#fef3c7]'>Features</li>
-      </Link>
-      <Link to='/products'>
-      <li className='hover:text-[#fef3c7]'>Products</li>
-      </Link>
-      <Link to='/about'>
-      <li className='hover:text-[#fef3c7]-700'>About</li>
-      </Link>
-      <Link to='/booking '>
-      <li className='hover:text-[#fef3c7]'>Booking</li>
-      </Link>
-      <Link to='/contact'>
-      <li className='hover:text-[#fef3c7]'>Contact Us</li>
-      </Link>
-    </ul>
-  </nav>
   
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-</header>
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
 
-);
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  return (
+    <header className="shadow">
+      <div className="bg-[#9a3412] py-4 hidden md:flex ">
+        <div className="container mx-auto flex justify-between items-center text-sm text-white">
+          <div className="flex space-x-4">
+            <div className="flex items-center space-x-1">
+              <FaAddressBook />
+              <span>13, Dean Road Sittingborn Kent Me102DG</span>
+            </div>
+            <div className="flex items-center space-x-1">
+              <FaBuildingColumns />
+              <span>TrOjAn CaRpEnTaRy</span>
+            </div>
+          </div>
+          <div className="flex space-x-4 items-center">
+            <div className="flex items-center space-x-1">
+              <MdCall />
+              <span>+07869514083</span>
+            </div>
+            <div className="flex space-x-2">
+              <CiFacebook />
+              <CiInstagram />
+              <CiTwitter />
+              <CiLinkedin />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav className="bg-gray-800 p-4">
+    <div className="container mx-auto flex justify-between items-center">
+      <div className="text-white text-xl">
+      <a  class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="/lg2.jpeg" class="h-20"  />
+    </a>
+      </div>
+      <div className="hidden md:flex space-x-4">
+        <Link to="/" className="text-white px-4 py-2 rounded-md hover:bg-gray-700">
+          Home
+        </Link>
+        <Link to="/about" className="text-white px-4 py-2 rounded-md hover:bg-gray-700">
+          About
+        </Link>
+        <div className="relative">
+          <button
+            onClick={toggleDropdown}
+            className="text-white px-4 py-2 rounded-md hover:bg-gray-700"
+          >
+             <Link to="/service" className="text-white px-4 py-2 rounded-md hover:bg-gray-700">
+                Services
+              </Link>
+          </button>
+          {dropdownOpen && (
+            <div className="absolute right-0 mt-2 w-48 bg-gray-200 rounded-md shadow-lg z-10">
+                <Link to="/services/staircase" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+           Staircase fitting
+            </Link>
+            <Link to="/services/floorinstallation" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+           Floor Installation
+            </Link>
+            <Link to="/services/bespokebookcases" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+           Bespoke bookcases
+            </Link>
+            <Link to="/services/secretrooms" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+             Secret Rooms
+            </Link>
+            <Link to="/services/bespokeshelving" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+             Bespoke Shelvig
+            </Link>
+            <Link to="/services/mediaunits" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            Media Units
+            </Link>
+            <Link to="/services/builtincupboards" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+             Built-in Cuboards
+            </Link>
+            <Link to="/services/fittedwardrobes" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+             Fitted wardrobes
+            </Link>
+            <Link to="/services/homelibrary" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            Home Libirary
+            </Link>
+            <Link to="/services/kitchenfitting"className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            Kitchen Fitting 
+            </Link>
+            <Link to="/services/windows" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+           Windows
+            </Link>
+            <Link to="/services/woodenshopfronts" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+           Wooden Shop Fronts
+            </Link>
+            <Link to="/services/doorinstallation" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+           Door Installation
+            </Link>
+            <Link to="/services/partitionwalls"className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            Partittion Walls
+            </Link>
+            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            Outdoor/Garden
+            </Link>
+            <Link to="/services/roofsfitting" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+          Roofs Fitting
+            </Link>
+            </div>
+          )}
+        </div>
+        <Link to="/gallary" className="text-white px-4 py-2 rounded-md hover:bg-gray-700">
+          Gallary
+        </Link>
+        <Link to="/contact" className="text-white px-4 py-2 rounded-md hover:bg-gray-700">
+          Contact
+        </Link>
+        
+      </div>
+      <div className="md:hidden flex items-center">
+        <button
+          onClick={toggleMobileMenu}
+          className="text-white px-4 py-2 rounded-md hover:bg-gray-700 focus:outline-none"
+        >
+          Menu
+        </button>
+      </div>
+    </div>
+    {mobileMenuOpen && (
+      <div className="md:hidden mt-10">
+        <Link to="/" className="block text-white px-4 py-2 hover:bg-gray-700">
+          Home
+        </Link>
+        <Link to="/about" className="block text-white px-4 py-2 hover:bg-gray-700">
+          About
+        </Link>
+        <button
+          onClick={toggleDropdown}
+          className="block text-white  hover:bg-gray-700"
+        >
+          <Link to="/service" className="block text-white px-4 py-2 hover:bg-gray-700">
+              Services
+            </Link>
+        </button>
+        {dropdownOpen && (
+          <div className="bg-gray-200 border-4 border-black">
+               <Link to="/service" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+           Staircase fitting
+            </Link>
+            <Link to="/service" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+           Floor Installation
+            </Link>
+            <Link to="/service" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+           Bespoke bookcases
+            </Link>
+            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+             Secret Rooms
+            </Link>
+            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+             Bespoke Shelvig
+            </Link>
+            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            Media Units
+            </Link>
+            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+             Built-in Cuboards
+            </Link>
+            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+             Fitted wardrobes
+            </Link>
+            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            Home Libirary
+            </Link>
+            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            Kitchen Fitting 
+            </Link>
+            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+           Windows
+            </Link>
+            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+           Wooden Shop Fronts
+            </Link>
+            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+           Door Installation
+            </Link>
+            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            Partittion Walls
+            </Link>
+            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            Outdoor/Garden
+            </Link>
+            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+          Roofs
+            </Link>
+            
+          </div>
+        )}
+        <Link to="/gallary" className="block text-white px-4 py-2 hover:bg-gray-700">
+          Gallary
+        </Link>
+        <Link to="/contact" className="block text-white px-4 py-2 hover:bg-gray-700">
+          Contact
+        </Link>
+      </div>
+    )}
+  </nav>
+    </header>
+  );
 };
 
 export default Header;

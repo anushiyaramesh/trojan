@@ -6,7 +6,7 @@ import { CiFacebook,CiInstagram ,CiTwitter,CiLinkedin } from "react-icons/ci";
 const Footer = () => {
   return (
 
-  <footer class="bg-[#92400e] text-white">
+  <footer class="bg-gray-800 text-white">
 	<div class="container flex flex-col p-4 mx-auto md:p-8 lg:flex-row dark:divide-gray-600">
 		<ul class="self-center py-6 space-y-4 text-center sm:flex sm:space-y-0 sm:justify-around sm:space-x-4 lg:flex-1 lg:justify-start">
 		<Link to='/'><li className='hover:text-[#fef3c7]'>Home</li></Link>
@@ -27,12 +27,12 @@ const Footer = () => {
 			</div>
 		</div>
 	</div>
-  <div class="bg-[#fef3c7]">
+  <div class="bg-[#9a3412]">
     <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p class="text-[#92400e] text-sm text-center sm:text-left">
+      <p class="text-white text-sm text-center sm:text-left">
       @trojan carpentary
       </p>
-      <span class="sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-[#92400e] text-sm">Refurbishmyhouseltd@gmail.com</span>
+      <span class="sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-white text-sm">Refurbishmyhouseltd@gmail.com</span>
     </div>
   </div>
 </footer>

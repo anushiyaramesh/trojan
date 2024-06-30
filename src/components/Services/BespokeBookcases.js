@@ -4,7 +4,7 @@ import React from 'react';
 
 const BespokeBookcases = () => {
   return (
-    <div className="p-28 bg-gray-100 min-h-screen">
+    <div className="md:p-28 p-10 bg-gray-100 min-h-screen">
       <h1 className="text-4xl font-bold text-[#9a3412] mb-4">Bespoke Bookcases</h1>
       <p className="text-lg text-gray-700 mb-6">
         At Trojan Carpentry, we specialize in crafting custom bookcases tailored to your space and style. Enhance your home with beautifully designed, functional storage.

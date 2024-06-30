@@ -97,8 +97,8 @@ return (
       >
         <div className="flex flex-col md:flex-row">
           <img src="/27.png" alt="Trojan Carpentry" className=" space-x-6  w-full h-60 md:w-[50%] rounded-md shadow-md mb-4 md:mb-0 md:mr-4" />
-          <div className="md:w-1/2">
-            <p className="text-lg mt-12 ml-12 text-[#a16207]">Welcome to Trojan Carpentry, your trusted partner for all your carpentry needs in the UK. With years of experience in the industry, our team of skilled craftsmen provide high-quality carpentry services to residential and commercial clients across the country.</p>
+          <div className="md:w-1/2 w-full">
+            <p className="text-lg mt-12 ml-12 text-[#a16207] ">Welcome to Trojan Carpentry, your trusted partner for all your carpentry needs in the UK. With years of experience in the industry, our team of skilled craftsmen provide high-quality carpentry services to residential and commercial clients across the country.</p>
           </div>
         </div>
       </motion.section>

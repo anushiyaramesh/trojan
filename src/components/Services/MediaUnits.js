@@ -4,7 +4,7 @@ import React from 'react';
 
 const MediaUnits = () => {
   return (
-    <div className="p-28 bg-gray-100 min-h-screen">
+    <div className="md:p-28 p-10 bg-gray-100 min-h-screen">
       <h1 className="text-4xl font-bold text-[#9a3412] mb-4">Media Units</h1>
       <p className="text-lg text-gray-700 mb-6">
         Discover our custom media units designed to elevate your home entertainment experience.

@@ -4,7 +4,7 @@ import React from 'react';
 
 const FloorInstallation = () => {
   return (
-    <div className="p-28 jpg bg-gray-100 min-h-screen">
+    <div className="md:p-28 p-10 jpg bg-gray-100 min-h-screen">
       <h1 className="text-4xl font-bold text-[#9a3412] mb-4">Floor Installation</h1>
       <p className="text-lg text-gray-700 mb-6">
         Trojan Carpentry offers expert floor installation services to elevate the beauty and durability of your home. Our team ensures precision and quality in every project.

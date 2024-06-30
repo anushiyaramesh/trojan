@@ -4,7 +4,7 @@ import React from 'react';
 
 const Windows = () => {
   return (
-    <div className="p-8 bg-gray-100 min-h-screen">
+    <div className="md:p-28 p-10bg-gray-100 min-h-screen">
       <h1 className="text-4xl font-bold text-[#9a3412] mb-4">Window Installation</h1>
       <p className="text-lg text-gray-700 mb-6">
         Enhance your home with our expert window installation and replacement services.

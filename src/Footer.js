@@ -13,7 +13,6 @@ const Footer = () => {
         <Link to='/about'><li className='hover:text-[#fef3c7]'>About</li></Link>
         <Link to='/service'><li className='hover:text-[#fef3c7]'>Services</li></Link>
         <Link to='/gallary'><li className='hover:text-[#fef3c7]-700'>Gallary</li></Link>
-        <Link to='/locations'><li className='hover:text-[#fef3c7]'>Booking</li></Link>
         <Link to='/contact'><li className='hover:text-[#fef3c7]'>Contact Us</li></Link>
 
 		</ul>

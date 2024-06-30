@@ -32,10 +32,10 @@ return (
     <ImageCarousel images={images} 
     />
   </div>
-  <section class="relative mx-auto w-full max-w-screen-xl px-6 sm:px-8 lg:px-12  group relative overflow-hidden mb-10  flex flex-col items-start lg:items-center pt-16 lg:pt-24">
+  <section class="relative mx-auto w-full max-w-screen-xl px-6 sm:px-8 lg:px-12  group relative overflow-hidden mb-10  flex flex-col items-start items-center pt-16 lg:pt-24">
   <div class="absolute -top-12 left-1/2 bg-indigo-400 w-1/2 h-32 blur-3xl sm:blur-4xl transition-opacity duration-500 opacity-40 group-hover:opacity-60"></div>
   <h2 class="text-[#9a3412] dark:text-white font-display font-extrabold leading-tight text-3xl sm:text-4xl lg:text-5xl dark:drop-shadow-lg lg:text-center"><span>Welcome to Trojan Carpentry!</span></h2>
-  <p class="paragraph leading-relaxed text-[#9a3412]  text-base mt-7 mb-8 max-w-lg lg:text-center"><span>At Trojan Carpentry, we pride ourselves on delivering exceptional craftsmanship and unparalleled service in the UK. Our team of skilled carpenters brings decades of experience to every project, ensuring that each piece of work we produce is of the highest quality..</span></p>
+  <p class="paragraph leading-relaxed text-[#9a3412]  text-base mt-7 mb-8 max-w-lg text-center"><span>At Trojan Carpentry, we pride ourselves on delivering exceptional craftsmanship and unparalleled service in the UK. Our team of skilled carpenters brings decades of experience to every project, ensuring that each piece of work we produce is of the highest quality..</span></p>
   <div class="flex flex-wrap gap-2"><button class="relative h-9 flex-shrink-0 rounded-full bg-gradient-radial from-[#fef3c7] to-[#92400e] p-px shadow shadow-indigo-500/25 focus:outline-none focus:ring-1 focus:ring-white/30" type="button">
       <div class="flex h-full items-center justify-center space-x-2 rounded-full bg-[#9a3412] text-indigo-50 hover:bg-[#9a3412] font-bold  pl-4 pr-2.5"><span class="dark:drop-shadow">Get Started</span><svg height="10" viewBox="0 0 20 10" class="fill-current opacity-50 dark:drop-shadow text-white" fill="current" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 5C0.5 4.44772 0.947715 4 1.5 4L18.5 4C19.0523 4 19.5 4.44772 19.5 5C19.5 5.55229 19.0523 6 18.5 6L1.5 6C0.947715 6 0.5 5.55228 0.5 5Z" fill="current" opacity="0" transform-origin="10px 5px"></path>
@@ -59,7 +59,7 @@ return (
           viewport={{ once: true, amount: 0.8 }}
           variants={cardVariants}
         >
-          <h2 className="text-2xl font-bold mb-4 text-white">Welcome to Trojan Carpentry!</h2>
+          <h2 className="text-2xl font-bold mb-4 text-white text-center">Welcome to Trojan Carpentry!</h2>
           <p className="text-lg text-center text-white">At Trojan Carpentry, we pride ourselves on delivering exceptional craftsmanship and unparalleled service in the UK.</p>
         </motion.div>
 

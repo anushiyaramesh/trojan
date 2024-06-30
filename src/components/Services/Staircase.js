@@ -3,7 +3,7 @@ import React from 'react';
 const Staircase = () => {
   return (
     <div>
- <div className="p-28 bg-gray-100 ">
+ <div className="md:p-28 p-10 bg-gray-100 w-full ">
       <h1 className="text-4xl font-bold text-[#9a3412] mb-4">Staircase Fitting</h1>
       <p className="text-lg text-gray-700 mb-6">
         At Trojan Carpentry, we specialize in custom staircase fitting that enhances the beauty and functionality of your home. Our skilled craftsmen ensure that each staircase is tailored to your specific needs and preferences.

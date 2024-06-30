@@ -146,43 +146,26 @@ const Header = () => {
         </button>
       </div>
     </div>
+
+
     {mobileMenuOpen && (
-      <div className="md:hidden mt-10">
-        <Link to="/" className="block text-white px-4 py-2 hover:bg-gray-700">
-          Home
-        </Link>
-        <Link to="/about" className="block text-white px-4 py-2 hover:bg-gray-700">
-          About
-        </Link>
-        <button
-          onClick={toggleDropdown}
-          className="block text-white  hover:bg-gray-700"
-        >
-          <Link to="/service" className="block text-white px-4 py-2 hover:bg-gray-700">
-              Services
-            </Link>
-        </button>
-        {dropdownOpen && (
-		  
-               <div className="bg-gray-200 border-4 border-black">
-        <Link to="/" className="text-white px-4 py-2 rounded-md hover:bg-gray-700">
-          Home
-        </Link>
-        <Link to="/about" className="text-white px-4 py-2 rounded-md hover:bg-gray-700">
-          About
-        </Link>
-        <div className="relative">
-          <button
-            onClick={toggleDropdown}
-            className="text-white px-4 py-2 rounded-md hover:bg-gray-700"
-          >
-             <Link to="/service" className="text-white px-4 py-2 rounded-md hover:bg-gray-700">
+    <div className="md:hidden mt-10">
+    <Link to="/" className="block text-white px-4 py-2 hover:bg-gray-700">
+      Home
+    </Link>
+    <Link to="/about" className="block text-white px-4 py-2 hover:bg-gray-700">
+      About
+    </Link>
+    <button
+      onClick={toggleDropdown}
+      className="block text-white px-4 py-2 hover:bg-gray-700 focus:outline-none"
+    >
+ <Link to="/service" className="text-white rounded-md hover:bg-gray-700">
                 Services
-              </Link>
-          </button>
-          {dropdownOpen && (
-            <div className="absolute right-0 mt-2 w-48 bg-gray-200 rounded-md shadow-lg z-10">
-                <Link to="/services/staircase" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+              </Link>  </button>
+    {dropdownOpen && (
+      <div className="bg-white">
+        <Link to="/services/staircase" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
            Staircase fitting
             </Link>
             <Link to="/services/floorinstallation" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
@@ -230,18 +213,17 @@ const Header = () => {
             <Link to="/services/roofsfitting" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
           Roofs Fitting
             </Link>
-            </div>
-          )}
-        </div>
-        <Link to="/gallary" className="text-white px-4 py-2 rounded-md hover:bg-gray-700">
-          Gallary
-        </Link>
-        <Link to="/contact" className="text-white px-4 py-2 rounded-md hover:bg-gray-700">
-          Contact
-        </Link>
-        
       </div>
     )}
+    <Link to="/gallary" className="text-white px-4 mt-2 py-2 rounded-md hover:bg-gray-700">
+          Gallary
+        </Link>
+    <Link to="/contact" className="block text-white mt-2 px-4 py-2 hover:bg-gray-700">
+      Contact
+    </Link>
+  </div>
+)}
+  
   </nav>
     </header>
   );

@@ -163,64 +163,83 @@ const Header = () => {
             </Link>
         </button>
         {dropdownOpen && (
-          <div className="bg-gray-200 border-4 border-black">
-               <Link to="/service" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+		  
+               <div className="bg-gray-200 border-4 border-black">
+        <Link to="/" className="text-white px-4 py-2 rounded-md hover:bg-gray-700">
+          Home
+        </Link>
+        <Link to="/about" className="text-white px-4 py-2 rounded-md hover:bg-gray-700">
+          About
+        </Link>
+        <div className="relative">
+          <button
+            onClick={toggleDropdown}
+            className="text-white px-4 py-2 rounded-md hover:bg-gray-700"
+          >
+             <Link to="/service" className="text-white px-4 py-2 rounded-md hover:bg-gray-700">
+                Services
+              </Link>
+          </button>
+          {dropdownOpen && (
+            <div className="absolute right-0 mt-2 w-48 bg-gray-200 rounded-md shadow-lg z-10">
+                <Link to="/services/staircase" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
            Staircase fitting
             </Link>
-            <Link to="/service" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            <Link to="/services/floorinstallation" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
            Floor Installation
             </Link>
-            <Link to="/service" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            <Link to="/services/bespokebookcases" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
            Bespoke bookcases
             </Link>
-            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            <Link to="/services/secretrooms" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
              Secret Rooms
             </Link>
-            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            <Link to="/services/bespokeshelving" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
              Bespoke Shelvig
             </Link>
-            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            <Link to="/services/mediaunits" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
             Media Units
             </Link>
-            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            <Link to="/services/builtincupboards" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
              Built-in Cuboards
             </Link>
-            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            <Link to="/services/fittedwardrobes" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
              Fitted wardrobes
             </Link>
-            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            <Link to="/services/homelibrary" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
             Home Libirary
             </Link>
-            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            <Link to="/services/kitchenfitting"className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
             Kitchen Fitting 
             </Link>
-            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            <Link to="/services/windows" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
            Windows
             </Link>
-            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            <Link to="/services/woodenshopfronts" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
            Wooden Shop Fronts
             </Link>
-            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            <Link to="/services/doorinstallation" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
            Door Installation
             </Link>
-            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            <Link to="/services/partitionwalls"className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
             Partittion Walls
             </Link>
             <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
             Outdoor/Garden
             </Link>
-            <Link to="/service2" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
-          Roofs
+            <Link to="/services/roofsfitting" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+          Roofs Fitting
             </Link>
-            
-          </div>
-        )}
-        <Link to="/gallary" className="block text-white px-4 py-2 hover:bg-gray-700">
+            </div>
+          )}
+        </div>
+        <Link to="/gallary" className="text-white px-4 py-2 rounded-md hover:bg-gray-700">
           Gallary
         </Link>
-        <Link to="/contact" className="block text-white px-4 py-2 hover:bg-gray-700">
+        <Link to="/contact" className="text-white px-4 py-2 rounded-md hover:bg-gray-700">
           Contact
         </Link>
+        
       </div>
     )}
   </nav>

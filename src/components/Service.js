@@ -21,7 +21,7 @@ const Service = () => {
     { title: 'DoorInstallation', image: '/D1.png', description: 'Professional door installation services.' },
     { title: 'PartitionWalls', image: '/P1.png', description: 'Construction of partition walls.' },
     { title: 'Outdoor/Garden', image: '/g2.png', description: 'Outdoor and garden carpentry services.' },
-    { title: 'RoofsFitting', image: '/images/roofs.jpg', description: 'Professional roofs fitting services.' }
+    { title: 'RoofsFitting', image: '/roof.png', description: 'Professional roofs fitting services.' }
   ];
   
  
